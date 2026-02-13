@@ -1,0 +1,35 @@
+% --- PAQUETES DE IDIOMA Y CODIFICACIÓN ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel} % Para que ponga "Cuadro" y "Figura"
+
+% --- MATEMÁTICAS Y FÍSICA (Tus herramientas) ---
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{physics}  % Imprescindible para tus derivadas \pdv
+\usepackage{siunitx}  % Para unidades \SI{3e8}{\meter\per\second}
+\usepackage{bm}       % Negritas matemáticas potentes
+\usepackage{cancel}
+
+% --- GRÁFICOS Y FIGURAS ---
+\usepackage{graphicx}
+% \usepackage{float}
+\usepackage{booktabs} % Tablas profesionales (sin líneas verticales)
+
+% --- HIPERVÍNCULOS ---
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,   % Azul estilo APS
+    citecolor=blue,
+    urlcolor=blue
+}
+
+% --- AJUSTES DE ESPAÑOL EN REVTEX ---
+% Revtex a veces se pone tonto con los nombres en inglés
+\addto\captionsspanish{
+  \renewcommand{\figurename}{FIGURA}
+  \renewcommand{\tablename}{TABLA}
+  \renewcommand{\refname}{REFERENCIAS}
+}
+
+\AtBeginDocument{\RenewCommandCopy\qty\SI}

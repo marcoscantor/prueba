@@ -1,0 +1,95 @@
+% aps = American Physical Society
+% prb = Physical Review B (estilo sólido)
+% twocolumn = Doble columna
+% superscriptaddress = Para que la uni salga bonita bajo el nombre
+\documentclass[aps,prb,twocolumn,superscriptaddress,spanish,10pt]{revtex4-2}
+
+% Cargamos tu preámbulo específico para papers
+\input{preambulo/preambulo.tex}
+
+% Archivo de bibliografía (asegúrate de tener ref.bib)
+% Nota: Revtex prefiere BibTeX estándar, no biblatex.
+\bibliographystyle{apsrev4-2} 
+
+\begin{document} 
+
+% ==========================================
+% BLOQUE DE TÍTULO Y AUTOR (El encabezado Pro)
+% ==========================================
+
+\title{Título del Experimento o Investigación: \\ Subtítulo Descriptivo y Técnico}
+
+\author{Marcos Bermúdez Cobarro}
+\email{marcos.bermudez@um.es} % Opcional: tu email profesional
+\affiliation{Grado en Física, Universidad de Murcia, 30100 Murcia, España.}
+
+\date{\today}
+
+% ==========================================
+% RESUMEN (ABSTRACT)
+% ==========================================
+% En los papers, el resumen va ANTES de imprimir el título
+\begin{abstract}
+\textbf{Resumen:} En este experimento se ha analizado el comportamiento de... (Aquí describes en 4-5 líneas el objetivo, el método y la conclusión principal). Se ha obtenido un valor experimental para la constante de Planck de $h = \SI{6.62e-34}{\joule\second}$, con un error relativo del \SI{0.5}{\percent} respecto al valor teórico. Los resultados confirman la hipótesis de cuantización.
+\end{abstract}
+
+% Imprime todo lo anterior (Título, Autor, Abstract)
+\maketitle
+
+% ==========================================
+% CONTENIDO DEL ARTÍCULO
+% ==========================================
+
+\section{Introducción}
+El efecto fotoeléctrico, explicado por Einstein en 1905 \cite{einstein1905}, demuestra la naturaleza corpuscular de la luz. La ecuación fundamental es:
+\begin{equation}
+    K_{\text{max}} = h\nu - W
+\end{equation}
+Donde $W$ es la función de trabajo del metal.
+
+\section{Método Experimental}
+Se utilizó una lámpara de mercurio y una red de difracción... Como vemos en la Ecuación (1), la relación es lineal.
+
+% EJEMPLO DE FIGURA A UNA COLUMNA
+\begin{figure}[t] % [t] = top (arriba). NUNCA uses [h] en doble columna.
+    \centering
+    \includegraphics[width=0.4\columnwidth]{Img/umulogo.jpg} 
+    \caption{Esquema del montaje experimental.}
+    \label{fig:montaje}
+\end{figure}
+
+\section{Resultados y Discusión}
+Los datos obtenidos se muestran en la Tabla \ref{tab:datos}. Nótese el uso de \texttt{booktabs} para tablas elegantes.
+
+\begin{table}[b] % [b] = bottom (abajo)
+    \centering
+    \caption{Voltaje de frenado vs Frecuencia.}
+    \begin{tabular}{cc}
+        \toprule
+        $\nu$ (\SI{e14}{\hertz}) & $V_0$ (\SI{}{\volt}) \\
+        \midrule
+        5.49 & 0.65 \\
+        6.88 & 1.22 \\
+        7.41 & 1.45 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:datos}
+\end{table}
+
+% EJEMPLO DE ECUACIÓN LARGA (MULTLINE)
+Si tienes una ecuación enorme que no cabe en una columna, usa \texttt{multline}:
+\begin{multline}
+    V(r) = -\frac{G M m}{r} + \frac{L^2}{2\mu r^2} \\
+    - \frac{G M}{c^2 r^3} (L^2 + \dots)
+\end{multline}
+
+\section{Conclusiones}
+El experimento ha sido un éxito rotundo. La física funciona.
+
+% ==========================================
+% BIBLIOGRAFÍA
+% ==========================================
+% Aquí le decimos qué archivo .bib usar
+\bibliography{ref.bib}
+
+\end{document}

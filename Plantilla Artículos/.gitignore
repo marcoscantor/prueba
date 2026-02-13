@@ -1,0 +1,31 @@
+Gemini said
+¡Exacto! 🎯 Ya tienes el Ferrari montado (VS Code + LaTeX), ahora te falta el garaje blindado (GitHub) para que si tu ordenador explota mañana, no pierdas ni una coma de tus apuntes.
+
+Configurar esto es lo que diferencia a un estudiante novato de uno profesional. Vamos a hacerlo en 3 pasos sencillos desde el propio VS Code.
+
+PASO 1: El "Filtro de Basura" (.gitignore) - ¡CRUCIAL! ⚠️
+LaTeX genera un montón de archivos temporales feos (.aux, .log, .fls, .synctex.gz) cada vez que compilas. NO queremos subir esa basura a GitHub, solo queremos tu código y el PDF final.
+
+En la columna de archivos de VS Code (izquierda), haz clic derecho en un espacio vacío → New File.
+
+Llámalo exactamente: .gitignore (con el punto al principio).
+
+Copia y pega esta lista dentro y guarda (Ctrl + S):
+
+Plaintext
+# Archivos basura de LaTeX que NO queremos en la nube
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.xml
+*.xdv
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
