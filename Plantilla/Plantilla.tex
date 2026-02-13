@@ -1,0 +1,52 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- CARGA DEL PREÁMBULO ---
+% Esto busca el archivo preambulo.tex en la misma carpeta
+\input{preambulo/preambulo.tex}
+
+\begin{document}
+
+% Aplicamos interlineado de 1.5 (definido en setspace)
+\onehalfspacing 
+
+% ==========================================
+% PORTADA
+% ==========================================
+\begin{titlepage}
+    \centering    
+    \vspace*{1cm}
+    
+    {\Huge\bfseries ----} \\[1.5cm]
+    {\Large\itshape Apuntes (de clase)} \\[1.5cm]
+
+    % LOGO: Asegúrate de que el archivo se llame así en tu carpeta Img
+    % Si no tienes la imagen aún, comenta la línea poniendo un % delante
+    \includegraphics[width=0.4\textwidth]{Img/umulogo.jpg} \\[2cm]
+    
+    {\Large\bfseries Profesor} \\[0.5cm]
+    {\Large ---} \\[1cm]
+    
+    {\Large\bfseries Autor} \\[0.5cm]
+    {\Large Marcos Bermúdez Cobarro} \\[2cm]
+    
+    {\large Grado en Física} \\[0.5cm]
+    {\large Universidad de Murcia} \\[0.5cm] 
+    {\large 2026}
+\end{titlepage}
+
+% ==========================================
+% ÍNDICE Y CONTENIDO
+% ==========================================
+
+% Índice automático
+\tableofcontents
+\newpage
+
+% --- INICIO DE LOS APUNTES ---
+\section{Introducción}
+
+
+\newpage
+\printbibliography[heading=bibintoc, title={Bibliografía}]
+
+\end{document}

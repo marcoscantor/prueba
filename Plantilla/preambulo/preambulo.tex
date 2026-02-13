@@ -1,0 +1,47 @@
+% --- 1. CODIFICACIÓN E IDIOMA ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish, es-tabla]{babel} 
+\usepackage{csquotes} 
+
+% --- 2. DISEÑO DE PÁGINA ---
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage{setspace} 
+\usepackage{fancyhdr} 
+\usepackage{float}    
+\usepackage{enumitem} 
+
+% --- 3. MATEMÁTICAS Y FÍSICA ---
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{tensor}   
+\usepackage{cancel}   
+\usepackage{siunitx}
+\sisetup{per-mode=symbol} 
+
+% Paquete Physics (Siempre después de amsmath)
+\usepackage[italicdiff]{physics} 
+\AtBeginDocument{\RenewCommandCopy\qty\SI} 
+
+% --- 4. GRÁFICOS Y REFERENCIAS ---
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+
+% Bibliografía
+\usepackage[style=phys, backend=biber]{biblatex}
+\addbibresource{ref.bib} 
+
+% Hipervínculos (Siempre al final)
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue]{hyperref}
+\usepackage[spanish]{cleveref} 
+
+% --- 5. TUS COMANDOS ---
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Marcos Bermúdez Cobarro}
+\fancyhead[R]{\thepage}
+
+\numberwithin{equation}{section}
+\newcommand{\ddt}[1]{\frac{d#1}{dt}}
+\newcommand{\pdd}[2]{\frac{\partial #1}{\partial #2}}
